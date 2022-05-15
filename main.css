@@ -341,8 +341,32 @@ template {
   display: none;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   background: black;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: black;
+}
+
+.top {
+  text-align: center;
+}
+
+.score {
+  text-align: center;
+  margin: 5px;
 }
 
 h1 {
@@ -373,159 +397,34 @@ img {
   max-height: 300px;
 }
 
-.photos {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (200px)[4];
-      grid-template-columns: repeat(4, 200px);
-  gap: 40px;
-  -ms-grid-rows: (300px)[3];
-      grid-template-rows: repeat(3, 300px);
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
+.game {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.photos .card1 {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
-}
-
-.photos .card4 {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3/4;
-}
-
-.photos .card2 {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
-}
-
-.photos .card5 {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
-}
-
-.photos .card3 {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3/4;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
-}
-
-.photos .card6 {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-}
-
-.card1 {
-  position: relative;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-.card2 {
-  position: relative;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-.card3 {
-  position: relative;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-.card4 {
-  position: relative;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-.card5 {
-  position: relative;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
 .card6 {
+  margin: 5px;
   position: relative;
-  -webkit-transform: scale(1);
-          transform: scale(1);
 }
 
-.card1:active {
-  position: relative;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-  -webkit-transition: transform(4s), transform(4s);
-  transition: transform(4s), transform(4s);
-  transition: transform(4s);
-}
-
-.card2:active {
-  position: relative;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-  -webkit-transition: transform(4s), transform(4s);
-  transition: transform(4s), transform(4s);
-  transition: transform(4s);
-}
-
-.card3:active {
-  position: relative;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-  -webkit-transition: transform(4s), transform(4s);
-  transition: transform(4s), transform(4s);
-  transition: transform(4s);
-}
-
-.card4:active {
-  position: relative;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-  -webkit-transition: transform(4s), transform(4s);
-  transition: transform(4s), transform(4s);
-  transition: transform(4s);
-}
-
-.card5:active {
-  position: relative;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-  -webkit-transition: transform(4s), transform(4s);
-  transition: transform(4s), transform(4s);
-  transition: transform(4s);
-}
-
-.card6:active {
-  position: relative;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-  -webkit-transition: transform(4s), transform(4s);
-  transition: transform(4s), transform(4s);
-  transition: transform(4s);
+.reveal,
+.backface {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: darkred;
 }
 /*# sourceMappingURL=main.css.map */
