@@ -6,49 +6,53 @@
     <title>3Racha Memory Game</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='/main.css'>
-    <script src='/java.js'></script>
+    <script src='/main.js'></script>
 </head>
 
 <body>
+    <div class="explain">
+        <p id="change">
+            <button type="button" class="explainbtn" onclick="loadDoc()">
+                <h1>
+                    Click me for explaination!
+                </h1>
+            </button>
+        </p>
+    </div>
   <div class="game">
       <div class="card1" >
           <img class="reveal1" src="/media/E-mapnpUYAAz7D-.jpeg" alt="chan photo">
-          <button><img class="backface1" src="/media/backcard.webp" alt="front of card"></button>
+          <button id="hide"><p><img class="backface1" src="/media/backcard.webp" alt="front of card"></p></button>
       </div>
 
       <div class="card2" >
           <img class="reveal2" src="/media/changbin.jpeg" alt="changbin photo">
-          <img class="backface2" src="/media/backcard.webp" alt="back of card">
+          <button id="hide"><p><img class="backface2" src="/media/backcard.webp" alt="back of card"></p></button>
       </div>
       
       <div class="card3" >
           <img class="reveal3" src="/media/han.webp" alt="han photo">
-          <img class="backface3" src="/media/backcard.webp" alt="back of card">
+          <button id="hide"><p><img class="backface3" src="/media/backcard.webp" alt="back of card"></p></button>
       </div>
       
       <div class="card4" >
           <img class="reveal4" src="/media/han.webp" alt="han photo">
-          <img class="backface4" src="/media/backcard.webp" alt="back of card">
+          <button id="hide"><p><img class="backface4" src="/media/backcard.webp" alt="back of card"></p></button>
       </div>
         
       <div class="card5" >
           <img class="reveal5" src="/media/E-mapnpUYAAz7D-.jpeg" alt="chan photo">
-            <img class="backface5" src="/media/backcard.webp" alt="back of card">
+          <button id="hide"><p><img class="backface5" src="/media/backcard.webp" alt="back of card"></p></button>
       </div>
         
       <div class="card6" >
             <img class="reveal6" src="/media/changbin.jpeg" alt="changbin photo">
-            <img class="backface6" src="/media/backcard.webp" alt="back of card">
+            <button id="hide"><p><img class="backface6" src="/media/backcard.webp" alt="back of card"></p></button>
       </div>
         
   </div>
   <div class="score">
-      <div class="correct">
-          <h3>Correct attempts:</h3> 
-      </div>
-      <div class="failed">
-          <h3>Failed attempts:</h3>
-      </div>
+        <h3>Correct attempts: 0</h3> 
   </div>
 </body>
 </html>
