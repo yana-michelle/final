@@ -413,9 +413,13 @@ img {
 button {
   background-color: darkred;
   text-decoration: none;
-  border: purple;
-  border-style: solid;
+  border: none;
+  border-style: none;
   color: red;
+}
+
+button:hover {
+  background-color: red;
 }
 
 .button1 {
@@ -436,6 +440,11 @@ button {
   text-decoration: none;
 }
 
+.button1:hover {
+  background-color: red;
+  color: red;
+}
+
 .button2 {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
@@ -453,6 +462,11 @@ button {
   text-decoration: none;
 }
 
+.button2:hover {
+  background-color: red;
+  color: red;
+}
+
 .button3 {
   font-size: 50px;
   top: 127px;
@@ -465,6 +479,11 @@ button {
   position: absolute;
   background: darkred;
   padding-bottom: 205px;
+}
+
+.button3:hover {
+  background-color: red;
+  color: red;
 }
 
 .button4 {
@@ -482,6 +501,11 @@ button {
   padding-bottom: 205px;
 }
 
+.button4:hover {
+  background-color: red;
+  color: red;
+}
+
 .button5 {
   font-size: 50px;
   top: 467px;
@@ -497,6 +521,11 @@ button {
   padding-bottom: 205px;
 }
 
+.button5:hover {
+  background-color: red;
+  color: red;
+}
+
 .button6 {
   font-size: 50px;
   top: 467px;
@@ -510,5 +539,10 @@ button {
   position: absolute;
   background: darkred;
   padding-bottom: 205px;
+}
+
+.button6:hover {
+  background-color: red;
+  color: red;
 }
 /*# sourceMappingURL=main.css.map */
