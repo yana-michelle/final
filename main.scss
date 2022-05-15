@@ -1,4 +1,18 @@
-@import "./vendor/normailize";
+@media (min-width: 768px) {
+    .cards {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-content: center;
+      position: relative;
+      perspective: 1000px;
+      align-items: stretch;
+    }
+  
+    .cards__single {
+      width: 20%;
+    }
+}
 
 * {
     padding: 0;
@@ -14,10 +28,6 @@ body{
     height: 100vh;
     display: flex;
     background: black;
-}
-
-.top{
-    text-align: center;
 }
 
 .score{
@@ -48,10 +58,6 @@ h3{
     text-decoration: underline;
 }
 
-img{
-    max-width: 200px;
-    max-height: 300px;
-}
 
 .game {
     width: 640px;
@@ -59,16 +65,18 @@ img{
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    perspective: 1000px;
 }
 
-.card1, 
-.card2,
-.card3,
-.card4,
-.card5,
-.card6 {
-    margin: 5px;
-    position: relative;
+.card{
+  width: calc(50% - 58px);
+  height: calc(58.333% - 1px);
+  margin: 5px;
+  position: relative;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
 }
   
 .reveal,
@@ -79,4 +87,35 @@ img{
     position: absolute;
     border-radius: 5px;
     background: darkred;
+}
+
+.card {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    transform-style: preserve-3d;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, .3);
+    transform: scale(1);
+}
+
+.card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+
+.reveal{
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+}
+
+.backface{
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    position: absolute;
 }
