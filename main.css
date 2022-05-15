@@ -1,5 +1,5 @@
 @media (min-width: 768px) {
-  .cards {
+  .game {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -18,9 +18,6 @@
         -ms-flex-align: stretch;
             align-items: stretch;
   }
-  .cards__single {
-    width: 20%;
-  }
 }
 
 * {
@@ -34,24 +31,16 @@ html {
   background: black;
 }
 
-body {
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: black;
+img {
+  max-width: 170px;
+  max-height: 200px;
 }
 
 .score {
+  position: absolute;
   text-align: center;
   margin: 5px;
-}
-
-h1 {
-  font-family: monospace;
-  text-align: center;
-  color: darkred;
-  font-size: 50px;
+  top: 800px;
 }
 
 h2 {
@@ -70,60 +59,87 @@ h3 {
   text-decoration: underline;
 }
 
-.game {
-  width: 640px;
-  height: 640px;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-}
-
-.card {
-  width: calc(50% - 58px);
-  height: calc(58.333% - 1px);
-  margin: 5px;
-  position: relative;
-  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
-}
-
-.reveal,
-.backface {
-  width: 100%;
-  height: 100%;
-  padding: 20px;
+button {
   position: absolute;
-  border-radius: 5px;
-  background: darkred;
+  padding: 0px;
+  background: none;
+  color: none;
+  border: none;
 }
 
-.card {
-  width: calc(25% - 10px);
-  height: calc(33.333% - 10px);
-  margin: 5px;
-  position: relative;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
-          box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
-  -webkit-transform: scale(1);
-          transform: scale(1);
+.game {
+  margin-left: 10px;
+  margin-top: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50px)[4];
+      grid-template-columns: repeat(4, 50px);
+  -ms-grid-rows: (50px)[4];
+      grid-template-rows: repeat(4, 50px);
+  gap: 210px;
 }
 
-.card:active {
+.card1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  position: absolute;
+}
+
+.card2 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  position: absolute;
+}
+
+.card3 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  position: absolute;
+}
+
+.card4 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  position: absolute;
+}
+
+.card5 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  position: absolute;
+}
+
+.card6 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  position: absolute;
+}
+
+.card1:active {
   -webkit-transform: scale(0.97);
           transform: scale(0.97);
   -webkit-transition: -webkit-transform .2s;
@@ -132,19 +148,108 @@ h3 {
   transition: transform .2s, -webkit-transform .2s;
 }
 
-.card.flip {
-  transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
+.card2:active {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
 }
 
-.reveal {
-  transform: rotateY(0deg);
-  -webkit-transform: rotateY(0deg);
+.card3:active {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
 }
 
-.backface {
-  transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
+.card4:active {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.card5:active {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.card6:active {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.reveal1 {
+  position: relative;
+}
+
+.reveal2 {
+  position: relative;
+}
+
+.reveal3 {
+  position: relative;
+}
+
+.reveal4 {
+  position: relative;
+}
+
+.reveal5 {
+  position: relative;
+}
+
+.reveal6 {
+  position: relative;
+}
+
+.backface1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
   position: absolute;
+  right: .2px;
+}
+
+.backface2 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  position: absolute;
+  right: .2px;
+}
+
+.backface3 {
+  position: absolute;
+  right: .2px;
+}
+
+.backface4 {
+  position: absolute;
+  right: .2px;
+}
+
+.backface5 {
+  position: absolute;
+  right: .2px;
+}
+
+.backface6 {
+  position: absolute;
+  right: .2px;
 }
 /*# sourceMappingURL=main.css.map */
