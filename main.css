@@ -341,6 +341,33 @@ template {
   display: none;
 }
 
+html {
+  background: black;
+}
+
+h1 {
+  font-family: monospace;
+  text-align: center;
+  color: darkred;
+  font-size: 50px;
+}
+
+h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: darkred;
+  text-align: center;
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+h3 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: darkred;
+  text-align: left;
+  font-size: 15px;
+  text-decoration: underline;
+}
+
 img {
   max-width: 200px;
   max-height: 300px;
@@ -354,9 +381,11 @@ img {
   gap: 40px;
   -ms-grid-rows: (300px)[3];
       grid-template-rows: repeat(3, 300px);
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
 }
 
-.photos .chan-top {
+.photos .card1 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -365,7 +394,7 @@ img {
   grid-row: 1/2;
 }
 
-.photos .chan-bottom {
+.photos .card4 {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
@@ -374,7 +403,7 @@ img {
   grid-column: 3/4;
 }
 
-.photos .changbin-top {
+.photos .card2 {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -383,7 +412,7 @@ img {
   grid-row: 1/2;
 }
 
-.photos .changbin-bottom {
+.photos .card5 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -392,7 +421,7 @@ img {
   grid-row: 2/3;
 }
 
-.photos .han-top {
+.photos .card3 {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
@@ -401,7 +430,7 @@ img {
   grid-row: 1/2;
 }
 
-.photos .han-bottom {
+.photos .card6 {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
@@ -410,48 +439,93 @@ img {
   grid-column: 2/3;
 }
 
-.reveal-chan {
-  position: absolute;
+.card1 {
+  position: relative;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-.reveal-chan:active {
-  -webkit-transform: scale(0.97);
-          transform: scale(0.97);
-  -webkit-transition: transfrorm .2s;
-  transition: transfrorm .2s;
-}
-
-.reveal-changbin {
-  position: absolute;
+.card2 {
+  position: relative;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-.reveal-changbin:active {
-  -webkit-transform: scale(0.97);
-          transform: scale(0.97);
-  -webkit-transition: transfrorm .2s;
-  transition: transfrorm .2s;
-}
-
-.reveal-han {
-  position: absolute;
+.card3 {
+  position: relative;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-.reveal-han:active {
-  -webkit-transform: scale(0.97);
-          transform: scale(0.97);
-  -webkit-transition: transfrorm .2s;
-  transition: transfrorm .2s;
+.card4 {
+  position: relative;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
-.back-face {
-  width: 100%;
-  height: 100%;
-  position: absolute;
+.card5 {
+  position: relative;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.card6 {
+  position: relative;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.card1:active {
+  position: relative;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: transform(4s), transform(4s);
+  transition: transform(4s), transform(4s);
+  transition: transform(4s);
+}
+
+.card2:active {
+  position: relative;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: transform(4s), transform(4s);
+  transition: transform(4s), transform(4s);
+  transition: transform(4s);
+}
+
+.card3:active {
+  position: relative;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: transform(4s), transform(4s);
+  transition: transform(4s), transform(4s);
+  transition: transform(4s);
+}
+
+.card4:active {
+  position: relative;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: transform(4s), transform(4s);
+  transition: transform(4s), transform(4s);
+  transition: transform(4s);
+}
+
+.card5:active {
+  position: relative;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: transform(4s), transform(4s);
+  transition: transform(4s), transform(4s);
+  transition: transform(4s);
+}
+
+.card6:active {
+  position: relative;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: transform(4s), transform(4s);
+  transition: transform(4s), transform(4s);
+  transition: transform(4s);
 }
 /*# sourceMappingURL=main.css.map */
