@@ -3,6 +3,43 @@ img{
     max-height: 300px;
 }
 
+.photos{
+    display: grid;
+    grid-template-columns:repeat(4,200px);
+    gap: 40px;
+    grid-template-rows: repeat(3,300px);
+}
+
+
+.chan-top{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.chan-bottom{
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
+
+.changbin-top{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.changbin-bottom{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.han-top{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.han-bottom{
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
 
 .button1{
     position: absolute;
@@ -10,8 +47,8 @@ img{
     padding-right: 68px;
     padding-bottom: 40px;
     top: 128px;
-    background-color: darkred;
-    color: black;
+    background: darkred;
+    color: darkred;
     font-size: 200px;
     border: none;
     text-align: center;
