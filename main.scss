@@ -1,0 +1,115 @@
+@import "./vendor/normailize";
+
+img{
+    max-width: 200px;
+    max-height: 300px;
+}
+
+.photos{
+    display: grid;
+    grid-template-columns:repeat(4,200px);
+    gap: 40px;
+    grid-template-rows: repeat(3,300px);
+    .chan-top{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .chan-bottom{
+        grid-row: 2/3;
+        grid-column: 3/4;
+    }
+    .changbin-top{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .changbin-bottom{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    }
+    .han-top{
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+    .han-bottom{
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+}
+
+button{
+    background-color: darkred;
+    text-decoration: none;
+    border:purple;
+    border-style: solid;
+    color: red;
+}
+
+.button1{
+      grid-row: 1/2;
+      grid-column: 1/2;
+        position: absolute;
+        top: 127px;
+        padding-bottom: 205px;
+        background: darkred;
+        color: darkred;
+        font-size: 50px;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+}
+
+.button2{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    background: darkred;
+    position: absolute;
+    top: 127px;
+    padding-bottom: 205px;
+    font-size: 50px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button3{
+    font-size: 50px;
+    top:127px;
+    grid-column: 3/4;
+    grid-row: 1/2;
+    position: absolute;
+    background: darkred;
+    padding-bottom: 205px;
+}
+
+.button4{    
+    font-size: 50px;
+    top:467px;
+    left: 0px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    position: absolute;
+    background: darkred;
+    padding-bottom: 205px;
+}
+
+.button5{
+    font-size: 50px;
+    top:467px;
+    left: 240px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    position: absolute;
+    background: darkred;
+    padding-bottom: 205px;
+}
+
+.button6{
+    font-size: 50px;
+    top:467px;
+    left: 480px;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    position: absolute;
+    background: darkred;
+    padding-bottom: 205px;
+}

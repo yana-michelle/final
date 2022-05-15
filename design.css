@@ -8,18 +8,18 @@ img{
     grid-template-columns:repeat(4,200px);
     gap: 40px;
     grid-template-rows: repeat(3,300px);
+    .chan-top{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .chan-bottom{
+        grid-row: 2/3;
+        grid-column: 3/4;
+    }   
+    
 }
 
 
-.chan-top{
-    grid-column: 1/2;
-    grid-row: 1/2;
-}
-
-.chan-bottom{
-    grid-row: 2/3;
-    grid-column: 3/4;
-}
 
 .changbin-top{
     grid-column: 2/3;
