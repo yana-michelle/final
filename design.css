@@ -1,0 +1,21 @@
+img{
+    max-width: 200px;
+    max-height: 300px;
+}
+
+
+.button1{
+    position: absolute;
+    padding-left: 68px;
+    padding-right: 68px;
+    padding-bottom: 40px;
+    top: 128px;
+    background-color: darkred;
+    color: black;
+    font-size: 200px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    max-height: 400px;
+    max-width: 200px;
+}
